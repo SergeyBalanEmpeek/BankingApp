@@ -1,0 +1,4 @@
+.password-flip {
+  cursor: pointer;
+  user-select: none;    /* disable text selection */
+}

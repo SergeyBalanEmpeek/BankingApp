@@ -1,0 +1,19 @@
+<div *ngIf="loadingShowMessage" class="alert alert-danger">{{loadingMessage}}</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Balance Changed</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of transactions">
+      <th scope="row">{{ t.id }}</th>
+      <td>{{ t.date }}</td>
+      <td>{{ t.amount }}$</td>
+      <td>{{ t.description }}</td>
+    </tr>
+  </tbody>
+</table>

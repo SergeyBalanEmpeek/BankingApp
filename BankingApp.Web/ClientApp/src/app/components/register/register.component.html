@@ -1,0 +1,30 @@
+<h4 class="pb-2 text-center">Registration Form</h4>
+
+<form #loginForm="ngForm" (ngSubmit)="register(loginForm)" ngNativeValidate>
+
+  <div class="form-group row">
+    <label for="login" class="col-sm-3 col-form-label">Login</label>
+    <div class="col-sm-9">
+      <input ngModel name="login" type="text" maxlength="50" class="form-control plaintext" required/>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="new-password" class="col-sm-3 col-form-label">Password</label>
+    <div class="col-sm-9">
+      <div class="input-group mb-3">
+        <input #password ngModel id="new-password" name="new-password" minlength="6" type="password" class="form-control" autocomplete="off" required/>
+        <div class="input-group-append">
+           <span class="input-group-text password-flip" (click)='flipPassword()' title="Change password visibility">👁</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <div class="text-center">
+    <button class="btn btn-secondary" type="button" [routerLink]='["/"]'>Cancel</button>
+    <button class="btn btn-primary ml-2" type="submit">Register</button>
+  </div>
+</form>
