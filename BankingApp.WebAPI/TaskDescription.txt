@@ -1,0 +1,23 @@
+﻿SPA
+ASP.NET Core WEB API
+.Net Core Dependency injection
+Entity Framework
+UnitTests using MsTest+Moq
+
+
+Angular JS 6
+Bootstrap
+
+
+Architecture: Layered
+Generic repository
+UnitOfWork
+
+
+Description:
+
+User can login, register using JWT token (username, password only)
+User can see his balance
+User can deposit and withdraw money
+User can transfer money to another user registered in the app.
+User can see list of transactions
